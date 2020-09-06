@@ -460,6 +460,8 @@ function MySlot:FindOrCreateMacro(macroInfo)
 end
 
 function MySlot:RecoverData(msg)
+	ClearMacro()
+   	ClearBinding()
 	--cache spells
 	local spells = {}
 
@@ -839,12 +841,14 @@ function MYSLOT_LoadFrame_OnScroll(self, offset)
 end
 
 function ClearMacro()
+	MySlot:Print("clear macro")
 	for i = 1, 20 do
 		RunScript("for i=1,138 do DeleteMacro(i) end")
     end
 end
 
 function ClearBinding()
+	MySlot:Print("clear key binding")
     for i = 1, GetNumBindings() do
     	local _, _, key1, key2 = GetBinding(i)
     
