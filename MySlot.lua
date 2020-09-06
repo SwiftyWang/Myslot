@@ -838,22 +838,35 @@ function MYSLOT_LoadFrame_OnScroll(self, offset)
 	FauxScrollFrame_OnVerticalScroll(self, offset, 27, MYSLOT_LoadFrame_Update)
 end
 
+function ClearMacro()
+	for i = 1, 20 do
+		RunScript("for i=1,138 do DeleteMacro(i) end")
+    end
+end
+
+function ClearBinding()
+    for i = 1, GetNumBindings() do
+    	local _, _, key1, key2 = GetBinding(i)
+    
+    for _, key in pairs({key1, key2}) do
+        if key then
+                SetBinding(key, nil, 1)
+            end
+        end
+    end
+    AttemptToSaveBindings(GetCurrentBindingSet())
+end
+
 function MySlot_Clearall(what)
     if what == "action" then
         for i = 1, MYSLOT_MAX_ACTIONBAR do
             PickupAction(i)
             ClearCursor()
         end
+    elseif what == "all" then
+        ClearMacro()
+    	ClearBinding()
     elseif what == "binding" then
-        for i = 1, GetNumBindings() do
-            local _, _, key1, key2 = GetBinding(i)
-            
-            for _, key in pairs({key1, key2}) do
-                if key then
-                    SetBinding(key, nil, 1)
-                end
-            end
-        end
-        AttemptToSaveBindings(GetCurrentBindingSet())
+    	ClearBinding()
     end
 end
