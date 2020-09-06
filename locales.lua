@@ -45,6 +45,8 @@ L["Time"] = true
 L["TOC_NOTES"] = "Myslot is for transferring settings between accounts. Feedback farmer1992@gmail.com"
 L["Try force importing"] = true
 L["Use random mount instead of an unattained mount"] = true
+L["clear current macro"] = true
+L["clear current key binding"] = true
 
 	MySlot_GetText = "Export";
 	MySlot_LoadText = "Load";
@@ -85,6 +87,8 @@ L["Time"] = "时间"
 L["TOC_NOTES"] = "Myslot可以帮助你在账号之间共享配置。反馈：farmer1992@gmail.com"
 L["Try force importing"] = "尝试强制导入"
 L["Use random mount instead of an unattained mount"] = "使用随机坐骑代替没有获得的坐骑"
+L["clear current macro"] = "当前宏命令已清除"
+L["clear current key binding"] = "当前按键已清除"
 
 	MySlot_GetText = "生成";
 	MySlot_LoadText = "载入";
@@ -121,6 +125,8 @@ L["Skip unsupported version"] = "忽略不相容的版本"
 L["Time"] = "時間"
 L["TOC_NOTES"] = "Myslot可以跨帳號綁定技能與按鍵設置。反饋通道：farmer1992@gmail.com"
 L["Use random mount instead of an unattained mount"] = "使用隨機座騎代替沒有獲得的座騎"
+L["clear current macro"] = "當前巨集已刪除"
+L["clear current key binding"] = "當前按鍵已刪除"
 
 	MySlot_GetText = "生成";
 	MySlot_LoadText = "載入";

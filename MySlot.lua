@@ -841,14 +841,14 @@ function MYSLOT_LoadFrame_OnScroll(self, offset)
 end
 
 function ClearMacro()
-	MySlot:Print("clear macro")
+	MySlot:Print(L["clear current macro"])
 	for i = 1, 20 do
 		RunScript("for i=1,138 do DeleteMacro(i) end")
     end
 end
 
 function ClearBinding()
-	MySlot:Print("clear key binding")
+	MySlot:Print(L["clear current key binding"])
     for i = 1, GetNumBindings() do
     	local _, _, key1, key2 = GetBinding(i)
     
